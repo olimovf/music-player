@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("./album/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 32rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-family: "Poppins-Regular", sans-serif;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: 1rem;
+    animation: title 15s linear infinite paused;
+}
+
+.title.play {
+    animation-play-state: running;
+}
+
+.image-container {
+    width: 15rem;
+    height: 15rem;
+    margin: 4rem auto 3rem;
+}
+
+.image-container .album-img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    user-select: none;
+    border-radius: 50%;
+    animation: img-rotate 10s linear infinite paused;
+}
+
+.wrapper.play .album-img {
+    animation-play-state: running;
+}
+
+input, button {
+    outline: none;
+}
+
+.progress-container {
+    width: 90%;
+    background-color: #fff;
+    margin: 0.5rem auto 1rem;
+    height: 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.time {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.progress {
+    height: inherit;
+    background-color: tomato;
+    width: 0%;
+    border-radius: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.control {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem auto;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn.big {
+    font-size: 2.4rem;
+}
+
+.link {
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .image-container {
+        width: 12rem;
+        height: 12rem;
+        margin: 4rem auto 2rem;
+    }
+
+    .time {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+
+    .control {
+        width: 80%;
+        margin: 0.25rem auto;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+    .btn.big {
+        font-size: 1.8rem;
+    }
+    
+}
+
+
+/* Keyframes */
+
+@keyframes title {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes img-rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="title">Aleksandr Rybak – Fairytale</h1>
+            
+            <div class="image-container">
+                <img id="cover" class="album-img" src="album/Aleksandr Rybak – Fairytale.jpg" alt="Album cover">
+            </div>
+
+            <input autofocus type="range" id="volume" min="0" value="50" max="100" step="1">
+
+            <div class="time">
+                <span id="start">00:00</span>
+                <span id="end">00:00</span>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+            
+            <audio src="musics/Aleksandr Rybak – Fairytale.mp3" id="audio"></audio>
+            
+            <div class="control">
+                <button class="btn" id="prev">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="btn big" id="play">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="btn" id="next">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <a class="link" href="https://github.com/FayozbekOlimov" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+
+    <!-- JavaScript -->
+   <script src="./index.js"></script>
+</body>
+</html>
