@@ -79,6 +79,24 @@ input, button {
     outline: none;
 }
 
+#volume {
+    appearance: none;
+    width: 200px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgb(142, 243, 10);
+    cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+}
+
 .progress-container {
     width: 90%;
     background-color: #fff;
@@ -125,6 +143,11 @@ input, button {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: #00f;
 }
 
 .btn.big {
@@ -136,7 +159,7 @@ input, button {
     font-size: 1.2rem;
     position: absolute;
     left: 50%;
-    bottom: 3%;
+    bottom: 2%;
     transform: translateX(-50%);
     text-decoration: none;
     letter-spacing: 2px;
@@ -176,6 +199,9 @@ input, button {
         font-size: 1.8rem;
     }
     
+    #volume {
+        width: 160px;
+    }
 }
 
 
