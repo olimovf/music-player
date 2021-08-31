@@ -11,13 +11,18 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <h1 class="title">Aleksandr Rybak – Fairytale</h1>
+            <marquee class="title">Aleksandr Rybak – Fairytale</marquee>
             
             <div class="image-container">
                 <img id="cover" class="album-img" src="album/Aleksandr Rybak – Fairytale.jpg" alt="Album cover">
             </div>
 
-            <input autofocus type="range" id="volume" min="0" value="50" max="100" step="1">
+            <div class="volume-wrapper">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-container">
+                    <input autofocus type="range" id="volume" min="0" value="50" max="100" step="1">
+                </div>
+            </div>
 
             <div class="time">
                 <span id="start">00:00</span>

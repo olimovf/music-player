@@ -131,4 +131,5 @@ function setProgress(e) {
 function changeVolume() {
     const volumeMusic = volume.value / volume.max;
     audio.volume = volumeMusic;
+    volume.style.background = `linear-gradient(to right, rgb(142, 243, 10) ${volume.value}%, rgb(255,255,255) ${volume.value}%)`;
 }

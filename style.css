@@ -45,11 +45,8 @@ body {
 
 .title {
     font-family: "Poppins-Regular", sans-serif;
-    position: absolute;
-    width: 100%;
-    left: 100%;
-    top: 1rem;
-    animation: title 15s linear infinite paused;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .title.play {
@@ -79,22 +76,41 @@ input, button {
     outline: none;
 }
 
-#volume {
-    appearance: none;
+.volume-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.volume-container {
     width: 200px;
     height: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#volume {
+    -webkit-appearance: none;
+    width: 92%;
+    height: 6px;
     border-radius: 3px;
-    background-color: rgb(142, 243, 10);
+    background: linear-gradient(to right, rgb(122, 209, 9) 50%, rgb(255,255,255) 50%);
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
 #volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
     appearance: none;
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background-color: red;
     cursor: pointer;
+    background-color: red;
 }
 
 .progress-container {
@@ -169,7 +185,7 @@ input, button {
 
 @media (max-width: 500px) {
     .title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .image-container {
@@ -199,7 +215,7 @@ input, button {
         font-size: 1.8rem;
     }
     
-    #volume {
+    .volume-container {
         width: 160px;
     }
 
@@ -209,18 +225,7 @@ input, button {
     }
 }
 
-
 /* Keyframes */
-
-@keyframes title {
-    from {
-        left: 100%;
-    }
-    to {
-        left: -100%;
-    }
-}
-
 @keyframes img-rotate {
     from {
         transform: rotate(0);
