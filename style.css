@@ -170,17 +170,6 @@ input, button {
     font-size: 2.4rem;
 }
 
-.link {
-    color: #fff;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 50%;
-    bottom: 2%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
 /* Responsive */
 
 @media (max-width: 500px) {
@@ -217,11 +206,6 @@ input, button {
     
     .volume-container {
         width: 160px;
-    }
-
-    .link {
-        bottom: 1%;
-        font-size: 0.9rem;
     }
 }
 
